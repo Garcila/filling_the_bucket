@@ -20,7 +20,6 @@ $(window).scroll(function(){
 
   }
 
-
   // Landing Elements
   if(wScroll > $('.projects-pics').offset().top - ($(window).height() / 1.2)) {
 
