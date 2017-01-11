@@ -1,0 +1,117 @@
+body {
+  font-family: Monospace;
+  text-align: center;
+  height: 100vh;
+  margin:0;
+}
+
+.flex {
+  display: -webkit-flex;
+}
+
+.left_title_bar {
+  flex: 0;
+  -webkit-flex-grow: 3;
+  color: white;
+  background-color: #262216;
+  height: 100vh;
+  -webkit-flex-shrink: 1;
+}
+
+.game_area1 {
+  flex: 2;
+  background-image: url("rps.jpg");
+  background-color: #49412c;
+  background-blend-mode: multiply;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game_area2 {
+  flex: 2;
+  background-image: url("rps.jpg");
+  background-color: #97743a;
+  background-blend-mode: multiply;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game_area3 {
+  flex: 2;
+  background-image: url("rps.jpg");
+  background-color: #b0a18e;
+  background-blend-mode: multiply;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: rgb(208, 96, 33);
+  padding-top: 20px;
+  font-size: 2.5em;
+}
+
+.rectangle {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.rectangle > *{
+  opacity: 0.5;
+  height:150px;
+  width:300px;
+  margin: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgb(252, 250, 250);
+  border-style: solid;
+}
+
+.top_rectangle {
+  background-color:#49412c;
+}
+
+.middle_rectangle {
+  background-color:#97743a;
+}
+
+.bottom_rectangle {
+  background-color:#b0a18e;
+}
+
+.circle_rock {
+  background-color:#49412c;
+  height:180px;
+  width:180px;
+  border-radius: 50%;
+}
+
+.circle_paper {
+  background-color:#97743a;
+  height:180px;
+  width:180px;
+  border-radius: 50%;
+}
+
+.circle_scissors {
+  background-color:#b0a18e;
+  height:180px;
+  width:180px;
+  border-radius: 50%;
+}
+
+button:focus {
+  outline:none;
+}
+
+a {
+  font-size: 2.5em;
+  color: rgb(254, 254, 254);
+  font-weight: bolder;
+}
