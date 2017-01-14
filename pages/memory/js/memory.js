@@ -72,10 +72,14 @@ $(document).ready(function() {
     numberOfTries++;
     $t = $('.t');
     $s = $('.s');
-    var one = '<div class="tries s"> try </div>';
-    var more = '<div class="tries s"> tries </div>';
-    var numT = '<div class="tries t">' + numberOfTries + '</div>';
-    numberOfTries > 1 ? $s.html(more) : $s.html(one) ;
+    $score = $('.score');
+    // var one = '<div class="tries s"> try </div>';
+    // var one = '<div class="tries s"> try </div>';
+    var one = 'try';
+    var more = 'tries';
+    // var numT = '<div class="tries t">' + numberOfTries + '</div>';
+    var numT = numberOfTries;
+    numberOfTries > 1 || numberOfTries === 0 ? $s.html(more) : $s.html(one) ;
     $t.html(numT);
   }
 
