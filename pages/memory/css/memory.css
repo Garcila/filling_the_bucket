@@ -173,151 +173,30 @@ body {
   transform: scale(0.2);
 }
 
-@media (max-width: 900px) {
+/*MEDIA QUERIES_____________________________*/
+@media screen and (max-width: 880px) {
+
   .title {
-    /*border: 3px solid red;*/
-    flex: 1;
-    transform: scale(0.75);
+    transform: scale(0.8);
   }
 
-  .flex {
-    flex: 5;
-    margin-left: 0;
-    /*border: 3px solid blue;*/
-    transform: scale(0.85);
-  }
-
-  .score {
-    max-height: 800px;
-    /*border: 5px solid yellow;*/
-  }
-
-  .btn {
-    height: 250px;
-    margin-bottom: -200px;
-  }
-}
-
-@media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
-  and (orientation: portrait)
-  and (-webkit-min-device-pixel-ratio: 1) {
-
-  body {
-    background-color: red;
-  }
   .page {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .flex {
-    border: 4px solid red;
-    margin-top: -40px;
+    flex-direction:column;
+    overflow:hidden;
   }
 
   .score {
-    display: inline-flex;
     flex-direction: row;
   }
 
-  .triesInfo {
-    display: inline-flex;
-    justify-content: space-between;
-    /*align-items: flex-start;*/
+  .onOff {
+    transform: scale(0.9);
   }
 
-
-  .tries.t {
-    margin-top: 10px;
-    margin-left: 65px;
-    /*align-items: flex-start;*/
-  }
-
-  .tries.s {
-    margin-left: 10px;
-    margin-top: 29px;
+  .tries {
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     justify-content: center;
   }
 
-  .small-pair.b {
-    display: none;
-  }
-
-  .Info {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .onOff {
-    align-self: baseline;
-    transform: scale(1.5);
-    margin: 30px 50px 30px 150px;
-  }
-
 }
-/*
-@media (max-width: 420px) {
-  .title {
-    margin-top: -190px;
-  }
-
-  .page {
-    transform: scale(0.65);
-  }
-
-  .container {
-    min-width: 545px;
-  }
-
-  .score {
-    margin-bottom: -100px;
-    display: inline-flex;
-  }
-
-  .small-pair {
-    margin-left: -100px;
-  }
-
-  .tries.s {
-    margin-right: 50px;
-  }
-  .tries.t {
-    margin: 0;
-    margin-top: 10px;
-    margin-left: 35px;
-  }
-
-  .onOff {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 380px) {
-  .score {
-    margin-bottom: -190px;
-  }
-
-  .title {
-    padding-top: 20px;
-  }
-
-  .onOff {
-    margin-right: -60px;
-  }
-
-@media (max-width: 320px) {
-
-
-}*/
-
-
-/*
-add media queries to change the size of the board,
-can be done in container max width
-*/
