@@ -46,17 +46,11 @@ $(document).ready(function() {
   function buildBoard(element, cells) {
     element.empty();
     for (var i = 0; i < cells; i++) {
-      $(element).append('<div class="cell" id="' + (i + 1) +
+      element.append('<div class="cell" id="' + (i + 1) +
         '" data-colour=' + userSelection[i] +
         '></div>'
       );
     }
-    // for (var i = 0; i < cells; i++) {
-    //   element.append('<div class="cell" id="' + (i + 1) +
-    //     '" data-colour=' + userSelection[i] +
-    //     '></div>'
-    //   );
-    // }
   };
 
   //modify div after comparing

@@ -274,5 +274,36 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
 
+@media screen and (max-width: 500px) {
+  body {
+/*     background-color: pink; */
+  }
+
+  .cell {
+    width: 80px;
+    height: 80px;
+  }
+
+  .title {
+    flex-direction:row;
+    align-items:flex-end;
+    justify-content:center;
+    border: 2px solid orange;
+  }
+
+  .slogan {
+    display: none;
+  }
+
+  .onOff:hover {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+}
+
+  .onOff:active {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
 }
