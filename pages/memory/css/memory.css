@@ -178,6 +178,7 @@ body {
 
   .title {
     transform: scale(0.8);
+    background-color: red;
   }
 
   .page {
