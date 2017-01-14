@@ -6,6 +6,8 @@ body {
 
 .page {
   display: flex;
+  align-items:center;
+  min-height:100vh;
 }
 
 /*TITLE_____________________________*/
@@ -133,7 +135,6 @@ body {
 /*SCORE_____________________________*/
 .score {
   flex: 1;
-  /*border: 1px solid yellow;*/
   display: flex;
   flex-direction: column;
   align-self: stretch;
@@ -149,11 +150,10 @@ body {
 
 .t {
   font-weight: bolder;
-  font-size: 2.5em;
+  font-size:4.5em;
 }
 
 .onOff {
-  border: 1px solid red;
   background: none;
   border: none;
   color: #b0b0b0;
@@ -182,8 +182,7 @@ body {
 
   .page {
     flex-direction:column;
-    overflow:hidden;
-    background-color: red;
+    max-height: 100vh;
   }
 
   .score {
