@@ -46,11 +46,17 @@ $(document).ready(function() {
   function buildBoard(element, cells) {
     element.empty();
     for (var i = 0; i < cells; i++) {
-      element.append('<div class="cell" id="' + (i + 1) +
+      $(element).append('<div class="cell" id="' + (i + 1) +
         '" data-colour=' + userSelection[i] +
         '></div>'
       );
     }
+    // for (var i = 0; i < cells; i++) {
+    //   element.append('<div class="cell" id="' + (i + 1) +
+    //     '" data-colour=' + userSelection[i] +
+    //     '></div>'
+    //   );
+    // }
   };
 
   //modify div after comparing
@@ -73,11 +79,8 @@ $(document).ready(function() {
     $t = $('.t');
     $s = $('.s');
     $score = $('.score');
-    // var one = '<div class="tries s"> try </div>';
-    // var one = '<div class="tries s"> try </div>';
     var one = 'try';
     var more = 'tries';
-    // var numT = '<div class="tries t">' + numberOfTries + '</div>';
     var numT = numberOfTries;
     numberOfTries > 1 || numberOfTries === 0 ? $s.html(more) : $s.html(one) ;
     $t.html(numT);
@@ -85,31 +88,13 @@ $(document).ready(function() {
 
   //determine game is over
   function isItOver() {
-    // var ttt = $('.container').has('.matched').length;
     console.log('ttt', tilesMatched);
     $('.container').children().each(function(index, element) {
       console.log($(element).hasClass('matched').length);
-      // tilesMatched === (userSelection - 2) * 7 ? console.log('won') : '';
-      // element.hasClass('.matched') ? console.log('has' + index) : '';
     });
-    // $('.container').append('<div>' +
-    // ($('.container').has('.matched').length === userSelection.length ? 'yes' : '') + '</div>');
-    // $(".container div").each(function(index, element) {
-      // console.log('zapato');
-      // console.log($(element));
-      // if ($(element).hasClass(".matched")) {
-          // console.log('game won!');
-      // }
-    // });
-    // if ($('.container > .matched').length > 1) {
-    //   console.log('game won!');
-    // }
   };
 
   console.log(userSelection.length);
-  // if ($("#gallery > div.show").length > 0)
-  // if($('#popup').children('p.filled-text').length > 0) {
-  // console.log("Found");
 
   //compareCells
   function compareCells(a, b) {
@@ -186,7 +171,4 @@ $(document).ready(function() {
 
 /* to do
 winning weeee
-number of tries
-some kind of wee when a pais is made
-
 */
