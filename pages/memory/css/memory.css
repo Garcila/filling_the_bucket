@@ -236,7 +236,6 @@ body {
 
 /*MEDIA QUERIES_____________________________*/
 @media screen and (max-width: 880px) {
-
   .title {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
@@ -277,10 +276,6 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-  body {
-/*     background-color: pink; */
-  }
-
   .cell {
     width: 80px;
     height: 80px;
@@ -290,7 +285,6 @@ body {
     flex-direction:row;
     align-items:flex-end;
     justify-content:center;
-    border: 2px solid orange;
   }
 
   .slogan {
@@ -305,5 +299,59 @@ body {
   .onOff:active {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 420px), (max-height: 740px) {
+  .title {
+    transform: scale(0.5);
+    margin-bottom: -10%;
+  }
+
+  .container {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .cell {
+    height: 70px;
+    width: 70px;
+  }
+
+  .btn {
+    width: 90px;
+  }
+}
+
+
+@media screen and (max-width: 370px) {
+  body {
+/*     background-color:cornsilk; */
+  }
+
+
+  .container {
+    border-left-width: 0px;
+    border-right-width: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    width: 80px;
+    height: 90px;
+    border-top-width: 2px;
+  }
+
+  .cell {
+    height: 60px;
+    width: 60px;
   }
 }
