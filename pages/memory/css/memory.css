@@ -311,6 +311,12 @@ body {
   .container {
     margin-top: 0;
   }
+
+  .btn {
+    width: 80px;
+    height: 90px;
+    border-top-width: 2px;
+  }
 }
 
 @media screen and (max-width: 410px) {
@@ -342,12 +348,6 @@ body {
 @media screen and (max-width: 320px) {
   .container {
     margin-bottom: 20px;
-  }
-
-  .btn {
-    width: 80px;
-    height: 90px;
-    border-top-width: 2px;
   }
 
   .cell {
