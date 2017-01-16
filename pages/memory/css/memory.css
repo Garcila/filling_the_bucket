@@ -234,6 +234,22 @@ body {
           transform: scale(0.2);
 }
 
+/*END GAME_________________________________ */
+.end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(222, 230, 235);
+  font-weight: bolder;
+  font-size: 4em;
+  text-transform: uppercase;
+  transform: scale(105%);
+  background-color: rgb(97, 155, 193);
+  width: 100vh;
+  height: 50hv;
+  z-index: 10;
+  cursor: pointer;
+}
 
 /*LANDSCAPE NOTIFICATION____________________ */
 .turnDeviceNotification {
@@ -349,11 +365,6 @@ body {
 
 
 @media screen and (max-width: 370px) {
-  body {
-/*     background-color:cornsilk; */
-  }
-
-
   .container {
     border-left-width: 0px;
     border-right-width: 0px;

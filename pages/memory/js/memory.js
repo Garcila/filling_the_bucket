@@ -3,7 +3,6 @@
 $(document).ready(function() {
   var $container = $('.container');
   var $body = $('body');
-  // var category;
   var arrayColors = ['#54E7FE', '#8A65B7', '#FF353D', '#FF8A27', '#FFFF00',
    '#01B230', '#7F9DB7', '#153A40','#54E7FE', '#8A65B7', '#FF353D', '#FF8A27',
    '#FFFF00', '#01B230', '#7F9DB7', '#153A40'];
@@ -80,15 +79,21 @@ $(document).ready(function() {
     $t.html(numT);
   }
 
+  //declare a winner
+  function winner() {
+    $container.html('<div class="again end">Play Again</div>');
+  }
+
   //determine game is over
   function isItOver() {
-    console.log('ttt', tilesMatched);
-    $('.container').children().each(function(index, element) {
-      console.log($(element).hasClass('matched').length);
+    var mtchd = 0;
+    var container = document.querySelector('.container');
+    var arrContainer = (Array.from((container).children));
+    arrContainer.forEach(function(div) {
+      div.classList.contains('matched') ? mtchd++ : '';
     });
+    mtchd === 14 ? winner() : '';
   };
-
-  console.log(userSelection.length);
 
   //compareCells
   function compareCells(a, b) {
@@ -122,6 +127,11 @@ $(document).ready(function() {
   }
 
   //Listeners ____________________________________________
+
+  //play Again
+  $('.container').on('click', '.end', function(event) {
+    init();
+  });
 
   //choose type of tyle on selection
   $('button').on('click', function(event) {
@@ -161,31 +171,29 @@ $(document).ready(function() {
       $body.css('pointer-events', 'none');
     }
   });
-});
 
-//landscape notification
+  //landscape notification
+  jQuery(window).bind('orientationchange', function(e) {
+    switch (window.orientation) {
+      case 0:
+        $('.turnDeviceNotification').css('display', 'none');
+        // The device is in portrait mode now
+      break;
 
+      case 180:
+        $('.turnDeviceNotification').css('display', 'none');
+        // The device is in portrait mode now
+      break;
 
-jQuery(window).bind('orientationchange', function(e) {
- switch ( window.orientation ) {
-  case 0:
-    $('.turnDeviceNotification').css('display', 'none');
-    // The device is in portrait mode now
-  break;
+      case 90:
+        // The device is in landscape now
+        $('.turnDeviceNotification').css('display', 'block');
+      break;
 
-  case 180:
-    $('.turnDeviceNotification').css('display', 'none');
-    // The device is in portrait mode now
-  break;
-
-  case 90:
-    // The device is in landscape now
-    $('.turnDeviceNotification').css('display', 'block');
-  break;
-
-  case -90:
-    // The device is in landscape now
-    $('.turnDeviceNotification').css('display', 'block');
-  break;
- }
+      case -90:
+        // The device is in landscape now
+        $('.turnDeviceNotification').css('display', 'block');
+      break;
+    }
+  });
 });
