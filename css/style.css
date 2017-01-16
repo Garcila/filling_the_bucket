@@ -984,3 +984,11 @@ footer {
   footer #flex {
     display: flex;
     align-items: baseline; }
+
+/*media queries*/
+@media screen and (max-width:680px){
+  .projects-pics, p {
+    /*background-color: red;*/
+    padding: 10px;
+  }
+}
