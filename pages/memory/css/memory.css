@@ -355,3 +355,19 @@ body {
     width: 60px;
   }
 }
+
+
+/*Landscape notification */
+.turnDeviceNotification {
+  position:fixed;
+  top: 0;
+  left:0;
+  height:100%;
+  width:100%;
+  display: none;
+}
+
+.turnDeviceNotification {
+  background-image:url('../images/portrait.png');
+  background-size:cover;
+}
